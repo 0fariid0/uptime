@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# دانلود اسکریپت اصلی از مخزن GitHub
+# Download the main script from the GitHub repository
 curl -O https://raw.githubusercontent.com/0fariid0/uptime/main/uptime_kuma_manager.sh
 
-# صادر کردن مجوز اجرای اسکریپت
+# Grant execute permissions to the script
 chmod +x uptime_kuma_manager.sh
 
-echo "اسکریپت دانلود و آماده اجرا است."
-echo "برای اجرای اسکریپت از دستور زیر استفاده کنید:"
+echo "The script has been downloaded and is ready to run."
+echo "To execute the script, use the following command:"
 echo "./uptime_kuma_manager.sh"
 
-# اجرای خودکار اسکریپت اصلی
+# Automatically execute the main script
 ./uptime_kuma_manager.sh
