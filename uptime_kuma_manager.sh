@@ -14,14 +14,17 @@ case $choice in
         # Install Uptime Kuma
         sudo apt update
         sudo apt install -y curl software-properties-common
-        
-        curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-        
+
+        # Remove old Node.js version (if any)
+        sudo apt remove -y nodejs
+
+        # Install Node.js version 18 from official repository
+        curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
         sudo apt install -y nodejs
-        
+
         mkdir -p ~/uptime-kuma
         cd ~/uptime-kuma
-        
+
         git clone https://github.com/louislam/uptime-kuma.git .
         
         npm install
